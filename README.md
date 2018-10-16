@@ -1,5 +1,8 @@
 # Fortran Regex
 Fortran regex using C++ regex. Wrapped C++ to C. Accessing C functions with Fortran
+### Requirements:
+The latest fortran compiler. Most of the features used are from Fortran 90 through 2003. Maybe even some from 2008.\
+This code was tested with gfortran 8.2 and it works well. There could be problems with older versions before gfortran 7. I have not tested this code on intels compiler.
 
 ### Functions:
 regex_replace\
@@ -25,7 +28,7 @@ All flags are optional\
 Replaces different text in the string if it matches the regular expressions. Automatically it is global by default.\
 First argument: String\
 Second argument: Regular expression string\
-Third argument: Replacement string\
+Third argument: Replacement string
 
 It returns a new string with the modifications
 ```
@@ -47,7 +50,7 @@ If any part of the string matches the regular expression then an array of arrays
 The first match index is the whole match meaning all the captures or non captures combined in a string. THe second capture and others are individual captures that are done with closed parenthesis ( ) in the regular expression.
 
 First argument: String\
-Second argument: Regular expression string\
+Second argument: Regular expression string
 
 ```
  regex_search("I am testing this code out","\w{4,}")
@@ -126,7 +129,7 @@ match#:           1
 #### regex_match_logical and regex_contains
 If a regular expression matches the whole string regex_match_logical will return true. If a regular expression matches part of a string then regex_contains returns true.
 First argument: String\
-Second argument: Regular expression string\
+Second argument: Regular expression string
 
 It returns a new string with the modifications
 ```
@@ -195,3 +198,12 @@ regex_search("I am testing this to make sure it works correctly","(\w{4,})",sfla
 regex_search("I am testing this to make sure it works correctly","(\w{4,})",mflags=[r_match_any])
 regex_search("I am testing this to make sure it works correctly","(\w{4,})",mflags=[r_match_any],sflags=[r_icase])
 ```
+### Compilation:
+Compile everything with -c then after link them all together with the -lstdc++ library.\
+This command has -O3 optimization. You can remove that if you want though. It works with it though.
+Example:
+```
+gfortran-8 -O3 -c your_fortran_program.f08 -o t.o && gfortran-8 -O3 -c regex.f08 -o regex.o && g++-8 -O3 -std=c++17 -c regex_master.cpp -o regex_master.o  &&gfortran-8 t.o regex_master.o regex.o -O3 -std=c++17 -o test.out -lstdc++ && ./test.out
+
+```
+You can make a 'make' file also
