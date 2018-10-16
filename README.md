@@ -206,4 +206,4 @@ Example:
 gfortran-8 -O3 -c your_fortran_program.f08 -o t.o && gfortran-8 -O3 -c regex.f08 -o regex.o && g++-8 -O3 -std=c++17 -c regex_master.cpp -o regex_master.o  &&gfortran-8 t.o regex_master.o regex.o -O3 -std=c++17 -o test.out -lstdc++ && ./test.out
 
 ```
-You can make a 'make' file also
+You can make a makefile also
