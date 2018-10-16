@@ -21,7 +21,7 @@ reg_data, r_matches, r_data, reg_matches
 
 ## How to:
 ### Regular Expressions:
-The slashes in the regular expressions don't need to be escaped for slashes like in C or C++
+The slashes in the regular expressions don't need to be escaped like in C or C++
 ### Functions:
 All flags are optional\
 
