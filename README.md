@@ -23,7 +23,7 @@ reg_data, r_matches, r_data, reg_matches
 ### Regular Expressions:
 The slashes in the regular expressions don't need to be escaped like in C or C++
 ### Functions:
-All flags are optional\
+All flags are optional
 
 #### regex_replace:
 Replaces different text in the string if it matches the regular expressions. Automatically it is global by default.\
@@ -128,7 +128,7 @@ match#:           1
 ```
 
 #### regex_match_logical and regex_contains
-If a regular expression matches the whole string regex_match_logical will return true. If a regular expression matches part of a string then regex_contains returns true.
+If a regular expression matches the whole string regex_match_logical will return true. If a regular expression matches part of a string then regex_contains returns true.\
 First argument: String\
 Second argument: Regular expression string
 
@@ -138,13 +138,13 @@ It returns a new string with the modifications
  regex_contains("I am testing this code out","\w{4,}")
 ```
 #### regex_indexof, regex_indexofend, regex_lastindexof, regex_lastindexofend
-These functions return the index which the match is detected. If nothing is found then these functions return -1 meaning nothing was found.
-First argument: String
+These functions return the index which the match is detected. If nothing is found then these functions return -1 meaning nothing was found.\
+First argument: String\
 Second argument: Regular expression string
 
-regex_indexof returns the first match occurance starting position
-regex_indexofend returns the first match occurance end position
-regex_lastindexof returns the last match occurance starting position
+regex_indexof returns the first match occurance starting position\
+regex_indexofend returns the first match occurance end position\
+regex_lastindexof returns the last match occurance starting position\
 regex_lastindexofend returns the last match occurance end position
 ```
  regex_indexof("I am testing this code out","\w{4,}")
