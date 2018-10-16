@@ -3,7 +3,7 @@ Fortran regex using C++ regex. Wrapped C++ to C. Accessing C functions with Fort
 ### Requirements:
 The latest fortran compiler. Most of the features used are from Fortran 90 through 2003. Maybe even some from 2008.\
 This code was tested with gfortran 8.2 and it works well. There could be problems with older versions before gfortran 7. I have not tested this code on intels compiler.\
-Any g++ that supports c++11 should work. g++ 8.2 worked good.
+Any g++ that supports c++11 should work. g++ 8.2 works good.
 
 ### Functions:
 regex_replace\
