@@ -136,7 +136,7 @@ If a regular expression matches the whole string regex_match_logical will return
 First argument: String\
 Second argument: Regular expression string
 
-It returns a new string with the modifications
+Returns a logical true or false
 ```
  regex_match_logical("I am testing this code out","\w{4,}")
  regex_contains("I am testing this code out","\w{4,}")
