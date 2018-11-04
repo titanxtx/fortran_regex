@@ -20,6 +20,10 @@ regex_lastindexofend
 reg_data, r_matches, r_data, reg_matches
 
 ## How to:
+### To use the module:
+```
+use regex
+```
 ### Regular Expressions:
 The slashes in the regular expressions don't need to be escaped like in C or C++
 ### Functions:
