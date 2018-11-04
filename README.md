@@ -40,12 +40,10 @@ It returns a new string with the modifications
  regex_replace("I am testing this code out","\w{4,}","Test")
 ```
 #### regex_match:
-If the whole string matches the regular expression then matches will return in a string array
+If the whole string matches the regular expression it will return a string array.
 
 First argument: String\
-Second argument: Regular expression string\
-
-It returns a new string with the modifications
+Second argument: Regular expression string
 ```
  regex_match("I am testing this code out","\w{4,}")
 ```
